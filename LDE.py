@@ -33,6 +33,8 @@ class SuperTuple:
 		return str(self.L)
 
 def gcd2(a,b):
+	""" Make sure a is larger than b. Only use integers pls. 
+	"""
 	r = a % b 
 	while r > 0:
 		a = b 
