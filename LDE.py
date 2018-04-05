@@ -1,4 +1,4 @@
-from elisha import gcd2
+
 
 class SuperTuple:
 	def __init__(self, *args): 
@@ -31,6 +31,15 @@ class SuperTuple:
 
 	def __str__(self):
 		return str(self.L)
+
+def gcd2(a,b):
+	r = a % b 
+	while r > 0:
+		a = b 
+		b = r 
+		r = a % b 
+		q = a // b
+	return b
 
 
 def LDE(a,b,x):
