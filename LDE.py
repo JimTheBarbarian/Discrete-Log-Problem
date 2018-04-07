@@ -66,3 +66,21 @@ def LDE(a,b,x):
 		r = a % b 
 		q = a // b
 	print((x / gcd2(a,b)) * x2)
+	return (x / gcd2(a,b)) * x2
+	
+	
+def LCE(a,b,n):
+	""" solves ax is congruent to b mod n. 
+	"""
+	blah = max(a,n) # I use this to let the LDE function run smoothly
+	bleh = min(a,n)
+	solutionSet = LDE(blah,bleh,b)
+	if bleh == a: # returning the coefficent of a in the solution of the LDE for a,n, and b. 
+		return solutionSet[1]
+	else:
+		return solutionSet[0]
+	
+def fracMod(n,m):
+	""" returns n mod m, where n is a fraction. If we consider n to be p/q, where p and q are integers,
+		then we are essentially solving for x in the LCE qx is congruent to p mod m.
+	""" 
